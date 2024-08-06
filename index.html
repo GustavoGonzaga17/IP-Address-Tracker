@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>IP Address Tracker</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: #3e52a3; }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <h1 class="title">IP Address Tracker</h1>
+    <section class="sectionSearch">
+      <input class="sectionSearch__searchInput" type="text" name="search" id="search" placeholder="Pesquise por algum endereço de IP ou Domínio">
+      <a href="#" class="sectionSearch__searchBtn">></a>
+    </section>
+
+    <section class="sectionInfo">
+      <div class="content">
+        <div class="infoText" id="ipAddress">
+          <h2 class="infoText__title">IP ADDRESS</h2>
+          <h3 class="infoText__value">192.212.174.101</h3>
+        </div>
+
+        <div class="divisionLine"></div>
+
+        <div class="infoText" id="location">
+          <h2 class="infoText__title">LOCATION</h2>
+          <h3 class="infoText__value">Brooklyn, NY 10001</h3>
+        </div>
+
+        <div class="divisionLine"></div>
+
+        <div class="infoText" id="timezone">
+          <h2 class="infoText__title">TIMEZONE</h2>
+          <h3 class="infoText__value">UTC - 05:00</h3>
+        </div>
+
+        <div class="divisionLine"></div>
+
+        <div class="infoText" id="isp">
+          <h2 class="infoText__title">ISP</h2>
+          <h3 class="infoText__value">SpaceX Starlink</h3>
+        </div>
+      </div>
+    </section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0790297875214!2d-43.510614713749824!3d-22.984121186995456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be7958e58fb8d%3A0xdb347303102bd627!2sCT%20George%20Helal%20(Ninho%20do%20Urubu)!5e0!3m2!1spt-BR!2sbr!4v1722901015340!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>

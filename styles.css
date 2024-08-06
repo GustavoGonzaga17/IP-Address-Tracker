@@ -1,0 +1,90 @@
+@import url(./Styles/reset.css);
+/*Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 15vw;
+    background-image: url(./images/pattern-bg-desktop.png);
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+
+.title {
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.sectionSearch {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.sectionSearch__searchInput {
+    padding: 1em;
+    width: 35vw;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.sectionSearch__searchBtn {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border-radius: 0 10px 10px 0;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.sectionInfo {
+    background-color: #3e52a3;
+    margin: 0 1vw;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+}
+
+.divisionLine {
+    border-left: solid black 1px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5em;
+    flex-wrap: wrap;
+}
+
+.infoText {
+    padding: 0 1em;
+}
+
+.infoText__title {
+    color: #B5C0D0;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.infoText__value {
+    color: black;
+    font-weight: 600;
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.map {
+    z-index: -1;
+    position: fixed;
+}
