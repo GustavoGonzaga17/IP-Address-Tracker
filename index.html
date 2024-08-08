@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <script src="./scripts.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
   <title>IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: #3e52a3; }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: #3e52a3;
+    }
   </style>
 
-  
+
 </head>
+
 <body>
   <main id="main">
     <h1 class="title">IP Address Tracker</h1>
     <section class="sectionSearch">
-      <input class="sectionSearch__searchInput" type="text" name="search" id="search" placeholder="Pesquise por algum endereço de IP ou Domínio">
+      <input class="sectionSearch__searchInput" type="text" name="search" id="search"
+        placeholder="Pesquise por algum endereço de IP ou Domínio">
       <button class="sectionSearch__searchBtn">></button>
     </section>
 
@@ -53,11 +69,16 @@
         </div>
       </div>
     </section>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0790297875214!2d-43.510614713749824!3d-22.984121186995456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be7958e58fb8d%3A0xdb347303102bd627!2sCT%20George%20Helal%20(Ninho%20do%20Urubu)!5e0!3m2!1spt-BR!2sbr!4v1722901015340!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!--MAPA-->
+    <div id="map"></div>
   </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
+
 </body>
+
 </html>
