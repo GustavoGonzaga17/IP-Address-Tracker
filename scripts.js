@@ -14,7 +14,7 @@ function initializeMap(lat, lon) {
     if (!map) {
         map = L.map('map').setView([lat, lon], 10);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
+            maxZoom: 5,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         marker = L.marker([lat, lon]).addTo(map);
@@ -32,7 +32,7 @@ searchBtn.addEventListener('click', () => {
 
 function search(searchValue) {
     console.log(searchValue)
-    fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_DpnAezzRwX5GFLYeT2IPicL7sw5ji&ipAddress=${searchValue}`)
+    fetch(`https://geo.ipify.org/api/v2/country?apiKey=at_DpnAezzRwX5GFLYeT2IPicL7sw5ji&${validateValue(searchValue)}`)
         .then(response => response.json())
         .then(data => {
             changeElements(data)
@@ -89,28 +89,15 @@ function initializeMap(lat, lon) {
         marker.setLatLng([lat, lon]);
     }
 }
-initializeMap(-22.98397165178341, -43.503907038337665);
 
-
-/*function getCoordinates(address) {
-    var url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}`;
-
-    return fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            if (data && data.length > 0) {
-                console.log(data)
-                return {
-                    lat: data[0].lat,
-                    lon: data[0].lon
-                };
-            } else {
-                alert('Localização não encontrada');
-            }
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            throw error;
-        });
-
-}*/
+function validateValue(searchValue) {
+    searchValueArr = searchValue.toString().split("")
+    console.log(searchValueArr)
+    for (let i = 0; i < searchValueArr.length; i++) {
+        if (Number(searchValueArr[0])) {
+            return `ipAddress=${searchValue}`
+        } else {
+            return `domain=${searchValue}`
+        }
+    }
+}
