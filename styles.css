@@ -4,18 +4,16 @@
 
 body {
     font-family: "Rubik", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 #main {
     display: flex;
     flex-direction: column;
-    margin: 5vh 15vw;
+    margin: 5vh 5vw;
     background-image: url(./images/pattern-bg-desktop.png);
     background-repeat: no-repeat;
     border-radius: 30px;
+    max-width: 1400px;
 }
 
 .title {
@@ -50,7 +48,7 @@ body {
 
 .sectionInfo {
     background-color: #3e52a3;
-    margin: 0 1vw;
+    margin: 0 5vw;
     border-radius: 20px;
     color: white;
     position: relative;
@@ -62,13 +60,15 @@ body {
 
 .content {
     display: flex;
-    justify-content: space-around;
-    padding: 1.5em;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
     flex-wrap: wrap;
 }
 
 .infoText {
-    padding: 0 1em;
+    padding: 0;
+    max-width: 30em;
 }
 
 .infoText__title {
@@ -80,7 +80,7 @@ body {
 .infoText__value {
     color: black;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-top: 15px;
 }
 
@@ -88,4 +88,34 @@ body {
     width: 100%;
     height: 500px;
     border-radius: 0 0 20px 30px;
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+    #main {
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    .sectionSearch__searchInput {
+        width: 100vw;
+    }
+
+    .sectionInfo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .infoText {
+        margin: 0.5em 0;
+    }
+    
+    .divisionLine {
+        display: none;
+    }
 }
